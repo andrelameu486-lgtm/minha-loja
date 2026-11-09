@@ -1,0 +1,184 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Loja André e Cortelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="marca">
+            <span class="marca-icon">AC</span>
+            <div>
+                <h1>André e Cortelo</h1>
+                <p>SUA LOJA, SUA ESCOLHA</p>
+            </div>
+        </div>
+
+        <button class="botao-carrinho" onclick="mostrarCarrinho()">
+            Meu carrinho <span id="quantidade">0</span>
+        </button>
+    </header>
+
+    <section class="banner">
+        <p class="destaque">COLEÇÃO ESPECIAL</p>
+        <h2>Encontre sua próxima <span>lupa.</span></h2>
+        <p>Conheça nossa seleção de produtos.</p>
+        <a href="#produtos" class="link-produtos">VER PRODUTOS ↓</a>
+    </section>
+
+    <main id="produtos">
+        <div class="titulo-secao">
+            <div>
+                <p class="destaque">NOSSA VITRINE</p>
+                <h2>Todos os produtos</h2>
+            </div>
+            <span>10 produtos</span>
+        </div>
+
+        <section class="produtos">
+
+            <article class="produto">
+                <span class="numero">01</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 1</h3>
+                <p class="descricao">Modelo clássico</p>
+                <div class="rodape-produto">
+                    <strong>R$ 79,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 1', 79.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">02</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 2</h3>
+                <p class="descricao">Modelo especial</p>
+                <div class="rodape-produto">
+                    <strong>R$ 199,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 2', 199.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">03</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 3</h3>
+                <p class="descricao">Modelo moderno</p>
+                <div class="rodape-produto">
+                    <strong>R$ 149,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 3', 149.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">04</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 4</h3>
+                <p class="descricao">Modelo compacto</p>
+                <div class="rodape-produto">
+                    <strong>R$ 89,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 4', 89.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">05</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 5</h3>
+                <p class="descricao">Modelo premium</p>
+                <div class="rodape-produto">
+                    <strong>R$ 229,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 5', 229.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">06</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 6</h3>
+                <p class="descricao">Modelo portátil</p>
+                <div class="rodape-produto">
+                    <strong>R$ 119,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 6', 119.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">07</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 7</h3>
+                <p class="descricao">Modelo profissional</p>
+                <div class="rodape-produto">
+                    <strong>R$ 179,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 7', 179.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">08</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 8</h3>
+                <p class="descricao">Modelo resistente</p>
+                <div class="rodape-produto">
+                    <strong>R$ 99,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 8', 99.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">09</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 9</h3>
+                <p class="descricao">Modelo exclusivo</p>
+                <div class="rodape-produto">
+                    <strong>R$ 259,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 9', 259.90)">Adicionar +</button>
+                </div>
+            </article>
+
+            <article class="produto">
+                <span class="numero">10</span>
+                <p class="categoria">LUPA</p>
+                <h3>Lupa 10</h3>
+                <p class="descricao">Modelo sofisticado</p>
+                <div class="rodape-produto">
+                    <strong>R$ 139,90</strong>
+                    <button onclick="adicionarCarrinho('Lupa 10', 139.90)">Adicionar +</button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <div id="fundoCarrinho" class="fundo-carrinho" onclick="fecharCarrinho()"></div>
+
+    <aside id="painelCarrinho" class="painel-carrinho">
+        <div class="cabecalho-carrinho">
+            <h2>Meu carrinho</h2>
+            <button class="fechar-carrinho" onclick="fecharCarrinho()">×</button>
+        </div>
+
+        <div id="itensCarrinho"></div>
+
+        <div class="resumo-carrinho">
+            <h3>Total: <span>R$ <span id="total">0,00</span></span></h3>
+            <button onclick="limparCarrinho()" class="limpar-carrinho">
+                Limpar carrinho
+            </button>
+        </div>
+    </aside>
+
+    <footer>
+        <h2>André e Cortelo</h2>
+        <p>Obrigado por visitar nossa loja.</p>
+        <small>© 2026 André e Cortelo</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
